@@ -1,0 +1,9 @@
+[Gedit Plugin]
+Loader=python
+Module=gistory
+IAge=2
+Name=History and navigation
+Description=Keep a list of edit points across documents and allow navigation through them.
+Authors=Rubén Caro <ruben.caro.estevez@gmail.com>
+Website=http://github.com/rubencaro/gistory
+

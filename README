@@ -1,0 +1,23 @@
+Edit history (Gedit Plugin)
+Rubén Caro <ruben.caro.estevez at gmail.com>
+
+Github location: http://github.com/rubencaro/gistory
+
+Install like any regular gedit plugin: just place 'gistory.gedit-plugin' file and 'gistory' folder 
+into your ~/.gnome2/gedit/plugins folder.
+
+- You get a tab in the sidebar panel that keeps track of every edit you do on any file.
+- If you click on an entry, it takes you to that place.
+- If the file was closed, it opens it on a new tab.
+- It keeps track of line number updates that may be necessary. 
+    Adding or deleting lines before an edit point would change line numbers, messing up any reference to them.
+    This plugin will update the line numbers on every entry to point to the actual environment 
+    where the original edit was made.
+- You can navigate through edit points using the arrow buttons on the tab.
+- You can quick navigate through edit points using '<Ctrl>.' and '<Ctrl>,'
+
+Future:
+- Allow editing point range threshold adjustment.
+- Use glade to design interface, allowing quicker adding of new user controlled features.
+
+
