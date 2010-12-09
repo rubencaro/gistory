@@ -124,13 +124,22 @@ class Gistory(gtk.VBox):
     # add each new tab to the watched list
     def _tab_added(self, window, tab):
         doc = tab.get_document()
-        doc.connect("changed",self._update)
+        #doc.connect("changed",self._update)
+        doc.connect("insert-text",self._update)
+        doc.connect("delete-range",self._update)
+        #doc.connect("paste-done",self._update)        
         # signals: ('changed', 'insert-text', 'insert-pixbuf', 'insert-child-anchor', 
         #   'delete-range', 'modified-changed', 'mark-set', 'mark-deleted', 
         #   'apply-tag', 'remove-tag', 'begin-user-action', 'end-user-action', 'paste-done')
         
+#    def _insert():
+#        self._update(doc)
+#        
+#    def _delete():
+#        self._update(doc)
+    
     # record any edit activity
-    def _update(self, doc):
+    def _update(self, doc, *args):
         iterator=doc.get_iter_at_mark( doc.get_insert() )
         current_line= iterator.get_line()
         
